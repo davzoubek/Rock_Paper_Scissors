@@ -4,7 +4,6 @@ const choices = ['rock', 'paper', 'scissors']
 
 const handleClick = (e) => {
   getResults(e.target.innerHTML, choices[Math.floor(Math.random() * choices.length)])
-  console.log(getResults)
 }
 choices.forEach(choice => {
   const button = document.createElement('button')
@@ -12,7 +11,6 @@ choices.forEach(choice => {
   button.addEventListener('click', handleClick)
   choicesDisplay.appendChild(button)
 })
-
 const getResults = (userChoice, computerChoice) => {
   switch (userChoice + computerChoice) {
     case 'scissorspaper':
